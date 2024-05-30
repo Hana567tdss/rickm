@@ -40,7 +40,19 @@
         </div>
       </div>
     </div>
-    <div class="h-8"></div>
+    <div>
+            <div>
+                  <footer class="bg-sky-600 text-white p-4 text-center mt-8 ">
+          <div class="flex justify-center space-x-4">
+            <a href="https://www.figma.com/design/99uqsH9kVgLfCWfk6KBhEA/Untitled?node-id=0-1&t=JM9yfOyLjaQsm6oL-1" target="_blank" rel="noopener noreferrer" class="text-sky-400 font-semibold text-2xl">Figma</a>
+            <a href="https://www.figma.com/proto/99uqsH9kVgLfCWfk6KBhEA/rick?node-id=1-2&t=w422Fjq1M72SMwSq-1&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=1%3A2" target="_blank" rel="noopener noreferrer" class="text-sky-400 font-semibold text-2xl">Figma-present</a>
+            <a href="https://github.com/Hana567tdss/rickm" target="_blank" rel="noopener noreferrer" class="text-sky-900 font-semibold text-2xl">GitHub</a>
+          </div>
+          <p>&copy; 2024 , All rights reserved.</p>
+        </footer>
+          </div>
+    </div>
+    
   </div>
 </template>
 

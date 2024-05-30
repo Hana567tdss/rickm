@@ -6,6 +6,7 @@ import { useQuery } from '@vue/apollo-composable'
 import created from './cra.vue'
 
 
+
 const CHARACTERS_QUERY = gql`
 query episode{
   episodes{
@@ -378,6 +379,7 @@ export default {
      <div>
 
           <div class="flex justify-center  gap-2">
+
      
             <div class=" font-normal text-xl mb-2  text-sky-800 ml-14 pt-3  cursor-pointer"><p> Follow Us :</p></div>
               <div class="pt-7 cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform:msFilter"><path d="M12.001 2.002c-5.522 0-9.999 4.477-9.999 9.999 0 4.99 3.656 9.126 8.437 9.879v-6.988h-2.54v-2.891h2.54V9.798c0-2.508 1.493-3.891 3.776-3.891 1.094 0 2.24.195 2.24.195v2.459h-1.264c-1.24 0-1.628.772-1.628 1.563v1.875h2.771l-.443 2.891h-2.328v6.988C18.344 21.129 22 16.992 22 12.001c0-5.522-4.477-9.999-9.999-9.999z"></path></svg></div>
@@ -386,13 +388,20 @@ export default {
 
               <div class="pt-7 cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform:msFilter"><path d="M21.593 7.203a2.506 2.506 0 0 0-1.762-1.766C18.265 5.007 12 5 12 5s-6.264-.007-7.831.404a2.56 2.56 0 0 0-1.766 1.778c-.413 1.566-.417 4.814-.417 4.814s-.004 3.264.406 4.814c.23.857.905 1.534 1.763 1.765 1.582.43 7.83.437 7.83.437s6.265.007 7.831-.403a2.515 2.515 0 0 0 1.767-1.763c.414-1.565.417-4.812.417-4.812s.02-3.265-.407-4.831zM9.996 15.005l.005-6 5.207 3.005-5.212 2.995z"></path></svg></div>
            </div>
+           <div>
+            <footer class="bg-sky-600 text-white p-4 text-center mt-8 ">
+    <div class="flex justify-center space-x-4">
+      <a href="https://www.figma.com/design/99uqsH9kVgLfCWfk6KBhEA/Untitled?node-id=0-1&t=JM9yfOyLjaQsm6oL-1" target="_blank" rel="noopener noreferrer" class="text-sky-400 font-semibold text-2xl">Figma</a>
+      <a href="https://www.figma.com/proto/99uqsH9kVgLfCWfk6KBhEA/rick?node-id=1-2&t=w422Fjq1M72SMwSq-1&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=1%3A2" target="_blank" rel="noopener noreferrer" class="text-sky-400 font-semibold text-2xl">Figma-present</a>
+      <a href="https://github.com/Hana567tdss/rickm" target="_blank" rel="noopener noreferrer" class="text-sky-900 font-semibold text-2xl">GitHub</a>
+    </div>
+    <p>&copy; 2024 , All rights reserved.</p>
+  </footer>
+           </div>
      </div>
 
+ 
 
-
-     <div class="flex justify-end">
-      <div class="font-normal  pr-8">   &copy; ,2024</div>
-     </div>
 
 </div>
 
