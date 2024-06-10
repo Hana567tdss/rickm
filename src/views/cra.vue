@@ -83,12 +83,8 @@ export default {
 <template>
   
   
-  <div class="vue-flux-container">
-    <!-- <FluxImage :rsc="rsc" :size="size" />
-    <FluxImage :rsc="a" :size="size" /> -->
-    <!-- <FluxImage :rsc="b" :size="size" />
-    <FluxImage :rsc="c" :size="size" />
-    <FluxImage :rsc="d" :size="size" /> -->
+  <div class="vue-flux-container  w-69 h-52 sm:w-auto sm:h-auto">
+    
 
     <VueFlux
       :options="options"
@@ -112,12 +108,24 @@ export default {
 
 <style scoped>
 .vue-flux-container {
+ 
   max-width: 400px;  /* Ensure the container size matches the image size */
   margin: auto;
+
 }
 
 .vue-flux-container img {
   width: 100%;
   height: auto;
+}
+@media (max-width: 640px) { /* Adjust for small screens, typically < 640px */
+  .vue-flux-container  {
+  width: 250px;
+  height: auto;
+}
+  .vue-flux-container img  {
+    width: 250px; /* New width for small screens */
+    height: auto; /* Maintain aspect ratio */
+  }
 }
 </style>

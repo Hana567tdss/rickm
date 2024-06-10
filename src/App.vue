@@ -8,10 +8,10 @@ import { RouterLink, RouterView } from 'vue-router'
 
       
    
-      <div><RouterLink to="/">Rick And Morty</RouterLink> </div>  
-      <div class=""><RouterLink to="/episode/1">episode-I</RouterLink>  </div>
+      <div class="pr-3"><RouterLink to="/">Rick And Morty</RouterLink> </div>  
+      <!-- <div class=""><RouterLink to="/episode/1">episode-I</RouterLink>  </div>
       <div class=""><RouterLink to="/location/1">location-I</RouterLink></div>
-      <div class="mr-4"><RouterLink to="/character/1">character-I</RouterLink></div>
+      <div class="mr-4"><RouterLink to="/character/1">character-I</RouterLink></div> -->
       
     </div>
 

@@ -1,4 +1,4 @@
-<script >
+<script>
 import { RouterLink } from 'vue-router'
 
 import gql from 'graphql-tag'
@@ -75,16 +75,20 @@ query episode{
 }
 `
 export default {
+ 
+   
   methods: {
-    checkEnter(event) {
+     checkEnter(event) {
       if (event.key === "Enter") {
         alert("Thank you");
       }
     }
   },
+  
   name: 'App',
   
   components: {
+    
     created, // Register the created component
   },
   setup() {
@@ -104,12 +108,23 @@ export default {
 <template class=" bg-sky-500">
 
   <div class="bg-sky-400">
+    
       <div class="flex flex-row">
-        <div><img src="/image/episode.jpg"  class="rounded-full ml-10 "/></div>
-        <h1 class="font-bold text-7xl  item-center mx-auto p-10 pr-0 shadow-inner shadow-black mt-3 rounded-sm"><span class=" text-sky-700">Rick</span> <span class="text-sky-900">and </span><span class="text-sky-950 mr-4 ">Morky</span></h1>
-        <div class="mt-40
-        mr-80 font-bold text-sky-900 "><span >Tv-show ,</span> 2013</div>
-      </div>  
+ 
+  <div> <img src="/image/episode.jpg" class="rounded-full    ml:11 sm:ml-10  mt-4 flex flex-shrink-0" /></div> 
+  
+  <h1 class="font-bold text-4xl sm:text-7xl sm:mx-auto p-7 sm:p-10 pr-2  shadow-inner shadow-black  mt-3 sm:mt-7 rounded-sm text-center sm:text-left">
+    <span class="text-sky-700 ">Rick&nbsp;</span>
+    <span class="text-sky-900">and&nbsp;</span>
+    <span class="text-sky-950 sm:mr-4">Morky</span>
+  </h1>
+  <div class="mt-9 sm:mt-40 sm:mr-80 font-normal text-xs sm:text-base sm:font-bold text-sky-900 text-center sm:text-left">
+    <span class="whitespace-pre-line">Tv-show,</span> 2013
+  </div>
+</div>
+
+
+  
       
 <div>
 
@@ -117,10 +132,10 @@ export default {
 </div>
 
 
-<div class=" flex justify-end mt-4">
-      <div class="border  rounded-full flex justify-end border-sky-900 pr-9  ">
+<div class=" flex justify-end mt-4 mb-4 sm:mb-0">
+      <div class="border  rounded-full flex justify-end border-sky-900 pr-3 ">
         <svg class="cursor-pointer mt-1 ml-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter"><path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path></svg>  
-        <input type="text" class="w-full outline-none text-base  bg-sky-400 text-sky-900  font-bold placeholder-sky-900 pr-7 pl-3" placeholder=" search episode number"/> 
+        <input type="text" class="w-full outline-none text-base  bg-sky-400 text-sky-900  font-bold placeholder-sky-900 pr-2 " placeholder=" search episode number"/> 
       
     </div>
     </div>
@@ -130,48 +145,52 @@ export default {
       </div>
 <!--  -->
 
-        <div class="flex justify-start gap-5  pt-4  flex-row mt-15">
-          <div class="text-sky-950 font-semibold  text-3xl pr-5 pl-6 pt-4 ">IMDB Rating <br>
+        <div class="flex justify-start  gap-0.5 sm:gap-5  pt-14 sm:pt-5 flex-row mt-15">
+          <div class="text-sky-950 font-semibold  sm:text-3xl text-1xl pr-5 pl-6 pt-4 ">IMDB Rating <br>
               <div classs=" flex justify-normal " >
-                <div> <img  src="/image/star.jpg" class="w-8 h-8 mt-4 ml-10  rounded-lg"/> </div>
-                <div class="text-2xl ml-5">  9.1/10</div>
+                <div> <img  src="/image/star.jpg" class="w-8 h-8 mt-4 ml:10 sm:ml-5 rounded-lg"/> </div>
+                <div class="text-2xl ml:10 sm:ml-5 sm:text-3xl text-1xl"> 9.1/10</div>
               </div> 
 
           </div>
 
           <div><img  src="/image/z.jpg" class="rounded-2xl"/></div>
-          <div class="w-40 h-36"></div>
+          <div class=" w-20 h-15 sm:w-40  sm:h-36"></div>
           <div><img  src="/image/rr.jpg" class="rounded-2xl"/></div>
-           <div><div class="text-sky-950 font-semibold  text-3xl pr-5 pl-6 pt-4 ">YOUR Rating <br>
+           <div><div class="text-sky-950 font-semibold pr-5 pl-6 pt-4  sm:text-3xl text-1xl">YOUR Rating  </div> 
               <div classs=" flex justify-normal " >
-                <div> <img  src="/image/star.jpg" class="w-8 h-8 mt-4 ml-10  rounded-lg"/> </div>
+                <div> <img  src="/image/star.jpg" class="w-8 h-8 mt-4 ml-7 sm:ml:5  rounded-lg"/> </div>
                 <div class="text-1xl ">
+               
+
                   <div class="border  rounded-sm flex justify-end border-sky-900 mt-3   ">
-                    <svg  @keydown="checkEnter"class="mt-0.5" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter"><path d="m6.516 14.323-1.49 6.452a.998.998 0 0 0 1.529 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082a1 1 0 0 0-.59-1.74l-5.701-.454-2.467-5.461a.998.998 0 0 0-1.822 0L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.214 4.107zm2.853-4.326a.998.998 0 0 0 .832-.586L12 5.43l1.799 3.981a.998.998 0 0 0 .832.586l3.972.315-3.271 2.944c-.284.256-.397.65-.293 1.018l1.253 4.385-3.736-2.491a.995.995 0 0 0-1.109 0l-3.904 2.603 1.05-4.546a1 1 0 0 0-.276-.94l-3.038-2.962 4.09-.326z"></path></svg>
-                    <input type="text" class="w-25 outline-none text-base rounded-lg bg-sky-400 text-sky-900  font-bold placeholder-sky-900  pl-3" placeholder=" Your Rating please!  " /> 
+                    <svg  @keydown="checkEnter"class="0 mt-0.5 sm:mt-0 sm:pl-0" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter"><path d="m6.516 14.323-1.49 6.452a.998.998 0 0 0 1.529 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082a1 1 0 0 0-.59-1.74l-5.701-.454-2.467-5.461a.998.998 0 0 0-1.822 0L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.214 4.107zm2.853-4.326a.998.998 0 0 0 .832-.586L12 5.43l1.799 3.981a.998.998 0 0 0 .832.586l3.972.315-3.271 2.944c-.284.256-.397.65-.293 1.018l1.253 4.385-3.736-2.491a.995.995 0 0 0-1.109 0l-3.904 2.603 1.05-4.546a1 1 0 0 0-.276-.94l-3.038-2.962 4.09-.326z"></path></svg>
+                    <input type="text" class="w-25 outline-none text-normal  bg-sky-400 text-sky-900  placeholder-sky-900 ml-0 pl-0 placeholder-ml-0" placeholder="Your Rating please!  " /> 
                     </div>  
                 </div>
               </div> 
 
-          </div></div>
+          </div>
+        
         </div>   
   
 
       <div>
           <div class="p-4 flex flex-row">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg>
-           <div> <h3 class="font-bold text-xl mb-2  text-sky-800 ml-6">Storyline <br/></h3></div>
-            <p class="ml-14 mt-4 pb-8"> Rick Sanchez, an alcoholic, nihilistic super-scientist, and his easily distressed grandson, Morty Smith to parallel <br>dimensions and exotic planets with extraterrestrials. These adventures commonly cause trouble for Morty's family<br> -Jerry, Beth,and Summer -who are often dragged along as well.</p>
-          </div>
+           <div> <p> <span class="font-bold  text-sm sm:text-xl mb-2  text-sky-800 ml-6 ">Storyline </span><br/><div class="ml-5"><span class=" mt-4 pb-8"> Rick Sanchez, an alcoholic, nihilistic super-scientist, and his easily distressed grandson, Morty Smith to parallel <br>dimensions and exotic planets with extraterrestrials. These adventures commonly cause trouble for Morty's family<br> -Jerry, Beth,and Summer -who are often dragged along as well.</span></div>
+           </p>
+           </div>
+      </div>
       </div>
 
+ 
+   <div  class="flex  flex-row ml-5 mx-auto ">
 
-   <div  class="flex  flex-row ml-7 mx-auto ">
-
-    <div class="max-w-sm rounded overflow-hidden shadow-lg ml-60  bg-sky-600">
-    <div class="px-6 py-4">
-      <div class="font-bold text-xl mb-2 text-sky-800">Genres</div>
-      <p class="text-gray-700 text-base">
+    <div class="max-w-sm rounded overflow-hidden shadow-lg  ml:20 sm:ml-60  bg-sky-600">
+    <div class="px-2 py-4 text-sm sm:text-xl">
+      <div class="font-bold  mb-2 text-sky-800">Genres</div>
+      <p class="text-gray-700 text-sm sm:text-xl">
                     Animation    Science-Fiction   Comedy   Adventure  
                     Fantasy
       </p>
@@ -180,14 +199,14 @@ export default {
       
       
     </div>
-        <div class="max-w-sm rounded overflow-hidden shadow-lg ml-10  bg-sky-600 ">
-        <div class="px-6 py-4">
-          <div class="flex flex-row">
-          <div class="font-bold text-xl mb-2  text-sky-800">Stars </div>
+        <div class=" rounded overflow-hidden shadow-lg ml-1 sm:ml-10  bg-sky-600 ">
+        <div class="px-2 py-4">
+          <div class="flex flex-row text-sm sm:text-xl">
+          <div class="font-bold  mb-2  text-sky-800">Stars </div>
           <div> <svg class="ml-5 mt-2 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter"><path d="M21.886 5.536A1.002 1.002 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13a.998.998 0 0 0 1.644 0l9-13a.998.998 0 0 0 .064-1.033zM12 17.243 4.908 7h14.184L12 17.243z"></path></svg> </div>
         </div>
       
-          <p class="text-gray-700 text-base">
+          <p class="text-gray-700 text-sm sm:text-xl">
                       Rick Sanchez, Spaner 
                       Grammer,
                         chris parenll
@@ -196,17 +215,17 @@ export default {
     
 
       
-</div class="flex  flex-row">
-    <div class="max-w-sm rounded overflow-hidden shadow-lg ml-10  bg-sky-600">
+</div class="flex  flex-row text-sm sm:text-xl">
+    <div class="max-w-sm rounded overflow-hidden shadow-lg ml-1 sm:ml-10  bg-sky-600">
     <div class="px-6 py-4">
       <div class="flex flex-row">
         
-      <div class="font-bold text-xl mb-2  text-sky-800">Creators </div>
-      <div>  <svg class="ml-5 mt-2 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter"><path d="M21.886 5.536A1.002 1.002 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13a.998.998 0 0 0 1.644 0l9-13a.998.998 0 0 0 .064-1.033zM12 17.243 4.908 7h14.184L12 17.243z"></path></svg>
+      <div class="font-bold text-sm sm:text-xl mb-2  text-sky-800">Creators </div>
+      <div>  <svg class=" ml-2 sm:ml-5 mt-2 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter"><path d="M21.886 5.536A1.002 1.002 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13a.998.998 0 0 0 1.644 0l9-13a.998.998 0 0 0 .064-1.033zM12 17.243 4.908 7h14.184L12 17.243z"></path></svg>
       </div>
     </div>
 
-      <p class="text-gray-700 text-base">
+      <p class="text-gray-700 text-sm sm:text-xl">
         Dan Harmon  Justin
         roiland
       </p>
@@ -218,25 +237,26 @@ export default {
     <div class="flex flex-row mt-7  ">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg>
 
-      <RouterLink to="/episode/1"> <div><a href=#><h2 class="font-bold text-xl mb-2  text-sky-800 ml-6  cursor-pointer">Episodes</h2></a></div></RouterLink>
+      <RouterLink to="/episode/1"> <div><a href=#><h2 class="font-bold text-sm sm:text-xl mb-2  text-sky-800  ml-2 sm:ml-6  cursor-pointer">Episodes</h2></a></div></RouterLink>
 
       <RouterLink to="/episode/1"> 
-        <div ><img src="/image/tv.jpg" alt="tv" class="w-15 h-10 rounded-full ml-6 cursor-pointer"></div>
+        <div ><img src="/image/tv.jpg" alt="tv" class="w-15 h-9 sm:w-15 sm:h-10  rounded-full ml-6 cursor-pointer"></div>
      </RouterLink> 
 
-      <div  class="font-normal text-xl mb-2  text-sky-800 ml-14  cursor-pointer"> Go To</div>
+      <div  class="font-normal text-sm sm:text-xl mb-2  text-sky-800 ml-7 sm:ml-14  cursor-pointer"> Go-To
 
      <RouterLink to="/episode/1"> 
-              <ul class="ml-12 mt-4 cursor-pointer">
-                    <li>>> Last Episode</li><br>
-                     <li>>>Top-Rated</li>
-                </ul>
+              <div class=" ml-9 sm:ml-12  mt-2 sm:mt-4 cursor-pointer">
+                    <p>>> Last Episode</p><br>
+                     <p>>>Top-Rated</p>
+              </div>
          </RouterLink> 
-
+        </div>
       <RouterLink to="/episode/1">
-        <div ><img src="/image/h5.jpg" class="ml-40 rounded-lg"/></div>
+        <div class="w-100 h-85" ><img src="/image/h5.jpg"  width="140" height="120" class=" sm:w-max sm:h-max ml-0  sm:ml-40 rounded-lg "/></div>
       </RouterLink><br> 
     </div>
+    
        <!-- episodes list -->
        <div></div>
        <div id="app">
@@ -249,9 +269,9 @@ export default {
               <div  class=" border h-15 w-60 m-3 p-4 shadow-sm shadow-sky-950 bg-sky-400"> 
                     <RouterLink :to="{ name: 'episode', params: { id: episode.id }}">
                     <div>
-                  <h2 class="text-2xl">{{ episode.episode }}</h2>
-                  <h2 class="text-1xl ">{{ episode.name }}</h2>
-                    </div>
+                     <h2 class="text-2xl">{{ episode.episode }}</h2>
+                    <h2 class="text-1xl ">{{ episode.name }}</h2>
+                  </div>
                     </RouterLink>
               </div> 
             </div>
@@ -284,19 +304,20 @@ export default {
       <div class="flex flex-row mt-5  ">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg>
         <RouterLink to="/character/1">
-        <div><a href=#><h2 class="font-bold text-xl mb-2  text-sky-800 ml-6  cursor-pointer">Characters</h2></a></div>
+        <div><a href=#><h2 class="font-bold text-sm sm:text-xl mb-2 mr-2  text-sky-800 ml-1 sm:ml-6  cursor-pointer">Characters</h2></a></div>
         </RouterLink>
 
         <RouterLink to="/character/1">
-        <div > <img src="/image/cattr.jpg" alt="tv" class="w-15 h-10 rounded-full ml-6 cursor-pointer"></div>
+        <div > <img src="/image/cattr.jpg" alt="tv" 
+          class="w-15 h-9 sm:w-15 sm:h-10  rounded-full ml:4 sm:ml-6 cursor-pointer"></div>
       </RouterLink>
 
-      <RouterLink to="/character/1"><div  class="font-normal text-xl mb-2  text-sky-800 ml-5 cursor-pointer">
-         Top Casts</div>
+      <RouterLink to="/character/1"><div  class="font-normal text-sm sm:text-xl mb-2  text-sky-800 ml-3 sm:ml-5 cursor-pointer">
+        <p>Top Casts</p></div>
         </RouterLink>
 
          <RouterLink to="/character/1">
-      <div ><img src="/image/characters1.jpg" class="ml-40 rounded-lg "/></div>
+      <div ><img src="/image/characters1.jpg" width="140" height="120"class="  sm:w-max sm:h-max ml-5 sm:ml-40 rounded-lg "/></div>
         </RouterLink>
       
        
@@ -327,15 +348,15 @@ export default {
    <div>
     <div class="mt-3">
       <div class="flex flex-row mt-5  ">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class=" ml-0" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg>
         <RouterLink to="/location/1">
-          <div><h2 class="font-bold text-xl mb-2  text-sky-800 ml-6  cursor-pointer">Location</h2></div>
+          <div><h2 class="font-bold text-sm sm:text-xl mb-2  text-sky-800 ml-6  cursor-pointer">Location</h2></div>
         </RouterLink>
         <RouterLink to="/location/1">
-          <div > <img src="/image/loca.jpg" alt="tv" class="w-15 h-10 rounded-full ml-6 cursor-pointer"></div>
+          <div > <img src="/image/loca.jpg"  alt="tv" class=" w-15 h-9 sm:w-15 sm:h-10 rounded-full  ml-2 sm:ml-6 cursor-pointer"></div>
         </RouterLink>
         <RouterLink to="/location/1">
-          <div ><img src="/image/liveplace.jpg" class="ml-40 rounded-lg"/></div>
+          <div ><img src="/image/liveplace.jpg"   width=" 140" height="120"  class="sm:w-max sm:h-max ml-2 sm:ml-40 rounded-lg"/></div>
         </RouterLink>
        
       
@@ -391,11 +412,11 @@ export default {
            <div>
             <footer class="bg-sky-600 text-white p-4 text-center mt-8 ">
     <div class="flex justify-center space-x-4">
-      <a href="https://www.figma.com/design/99uqsH9kVgLfCWfk6KBhEA/Untitled?node-id=0-1&t=JM9yfOyLjaQsm6oL-1" target="_blank" rel="noopener noreferrer" class="text-sky-400 font-semibold text-2xl">Figma</a>
-      <a href="https://www.figma.com/proto/99uqsH9kVgLfCWfk6KBhEA/rick?node-id=1-2&t=w422Fjq1M72SMwSq-1&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=1%3A2" target="_blank" rel="noopener noreferrer" class="text-sky-400 font-semibold text-2xl">Figma-present</a>
-      <a href="https://github.com/Hana567tdss/rickm" target="_blank" rel="noopener noreferrer" class="text-sky-900 font-semibold text-2xl">GitHub</a>
+      <a href="https://www.figma.com/design/99uqsH9kVgLfCWfk6KBhEA/Untitled?node-id=0-1&t=JM9yfOyLjaQsm6oL-1" target="_blank" rel="noopener noreferrer" class="text-sky-400 font-semibold text-sm sm:text-2xl">Figma</a>
+      <a href="https://www.figma.com/proto/99uqsH9kVgLfCWfk6KBhEA/rick?node-id=1-2&t=w422Fjq1M72SMwSq-1&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=1%3A2" target="_blank" rel="noopener noreferrer" class="text-sky-400 font-semibold  text-sm sm:text-2xl">Figma-present</a>
+      <a href="https://github.com/Hana567tdss/rickm" target="_blank" rel="noopener noreferrer" class="text-sky-900 font-semibold text-sm sm:text-2xl">GitHub</a>
     </div>
-    <p>&copy; 2024 , All rights reserved.</p>
+    <p class="text-xs sm:text-normal">&copy; 2024 , All rights reserved.</p>
   </footer>
            </div>
      </div>
