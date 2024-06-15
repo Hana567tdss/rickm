@@ -221,7 +221,7 @@ export default {
       <div class="flex flex-row">
         
       <div class="font-bold text-sm sm:text-xl mb-2  text-sky-800">Creators </div>
-      <div>  <svg class=" ml-2 sm:ml-5 mt-2 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter"><path d="M21.886 5.536A1.002 1.002 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13a.998.998 0 0 0 1.644 0l9-13a.998.998 0 0 0 .064-1.033zM12 17.243 4.908 7h14.184L12 17.243z"></path></svg>
+      <div>  <svg class=" ml-0.5 sm:ml-5 mt-2 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter"><path d="M21.886 5.536A1.002 1.002 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13a.998.998 0 0 0 1.644 0l9-13a.998.998 0 0 0 .064-1.033zM12 17.243 4.908 7h14.184L12 17.243z"></path></svg>
       </div>
     </div>
 
@@ -368,7 +368,7 @@ export default {
       <div v-for="location in result.locations.results" :key="location.id" class="location">
         <div  class=" border-none h-15 w-60 m-3 p-4 bg-sky-500 rounded-3xl ">
           <RouterLink :to="{ name: 'location', params: { id: location.id }}">
-              <h2 class="text-2xl ">{{ location.name }}</h2>
+              <h2 class=" text-2xl ">{{ location.name }}</h2>
             <h2 class=" ">{{ location.type }}</h2>
           </RouterLink>
         </div>
